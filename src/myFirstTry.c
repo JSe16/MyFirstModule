@@ -6,12 +6,14 @@
 
 #include "myFirstTry.h"
  #include <zephyr/kernel.h>
-#include <sys/printk.h>
+ #include <zephyr/logging/log.h>
 /* Stackgröße und Priorität für den Thread */
 
 
 #define MY_STACK_SIZE 500
 #define MY_PRIORITY 5
+
+LOG_MODULE_REGISTER(testModule, CONFIG_APP_LOG_LEVEL);
 
 /* Thread-Stack und Steuerblock */
 K_THREAD_STACK_DEFINE(my_stack_area, MY_STACK_SIZE);
@@ -21,7 +23,7 @@ struct k_thread my_thread_data;
 void my_thread(void *arg1, void *arg2, void *arg3)
 {
     while (1) {
-        printk("Hallo aus meinem Thread!\n");
+        LOG_INF("Hallo aus meinem Thread!\n");
         k_sleep(K_MSEC(1000));  // 1 Sekunde schlafen
     }
 }
