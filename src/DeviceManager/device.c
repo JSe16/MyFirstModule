@@ -9,7 +9,7 @@
  #include <zephyr/logging/log.h>
 /* Stackgröße und Priorität für den Thread */
 
-
+device_t test;
 
 void init_device(device_t *dev, uint32_t id, uint32_t flags)
 {
