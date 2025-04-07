@@ -10,6 +10,8 @@
 /* Stackgröße und Priorität für den Thread */
 
 
+LOG_MODULE_REGISTER(device, CONFIG_APP_LOG_LEVEL);
+
 void init_device(device_t *dev, uint32_t id, uint32_t flags)
 {
 	dev->id = id;
