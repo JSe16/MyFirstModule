@@ -2,5 +2,6 @@
 # SPDX-License-Identifier: Apache-2.0
 
 zephyr_library()
-zephyr_library_sources(src/myFirstTry.c)
+zephyr_library_sources(src/myFirstTry.c
+		       src/DeviceManager/device.c)
 zephyr_include_directories(src)
