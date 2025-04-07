@@ -5,7 +5,7 @@
  */
 
 #include "myFirstTry.h"
-#include <zephyr.h>
+ #include <zephyr/kernel.h>
 #include <sys/printk.h>
 /* Stackgröße und Priorität für den Thread */
 
