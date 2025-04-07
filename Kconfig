@@ -1,0 +1,9 @@
+# Copyright (c) 2021, Legrand North America, LLC.
+# SPDX-License-Identifier: Apache-2.0
+
+config MYFIRSTTRY
+	bool "Support for custom library"
+	help
+	  This option enables the 'custom' library
+
+
